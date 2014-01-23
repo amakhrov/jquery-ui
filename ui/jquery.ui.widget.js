@@ -237,7 +237,7 @@ $.Widget.prototype = {
 	_createWidget: function( options, element ) {
 		element = $( element || this.defaultElement || this )[ 0 ];
 		this.element = $( element );
-		this.element.jquiTriggerRemove = true;
+		element.jquiTriggerRemove = true;
 		this.uuid = widget_uuid++;
 		this.eventNamespace = "." + this.widgetName + this.uuid;
 		this.options = $.widget.extend( {},
